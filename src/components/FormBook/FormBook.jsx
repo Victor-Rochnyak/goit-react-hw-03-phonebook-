@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid';
+import PropTypes from "prop-types";
 // Стилі
 import {Form,Label,Input,Button} from './FormBok.styled';
+
+
 class FormBook extends Component {
   state = {
     name: '',
@@ -59,3 +62,11 @@ class FormBook extends Component {
   }
 }
 export default FormBook;
+
+
+
+FormBook.prototypes = {
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+};

@@ -1,6 +1,9 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 // Стилі
 import {Label,Input} from './FilterContacts.styled'
+
+
 const FilterContacts=({filter,changeFilter})=>(
     <Label>
     <Input
@@ -12,3 +15,8 @@ const FilterContacts=({filter,changeFilter})=>(
   </Label>
 )
 export default FilterContacts;
+
+FilterContacts.propTypes = {
+  filter: PropTypes.string.isRequired,
+  changeFilter: PropTypes.func.isRequired,
+};
